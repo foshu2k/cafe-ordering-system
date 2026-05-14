@@ -7,7 +7,7 @@ export default function Footer() {
     const location = useLocation();
 
     return (
-        <>
+        
             <div className={styles.container}>
                 <NavLink
                     className={styles.button}
@@ -28,6 +28,6 @@ export default function Footer() {
                     <p>{location.pathname == "/cart" ? "Home" : "Your Cart"}</p>
                 </NavLink>
             </div>
-        </>
+       
     )
 }

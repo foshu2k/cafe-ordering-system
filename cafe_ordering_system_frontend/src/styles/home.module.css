@@ -22,6 +22,10 @@
     display: flex;
     max-width: 100%;
     min-height: 75px;
+
+    justify-content: center;
+    align-items: center;
+   
     
     /* 3. Enable horizontal scrolling and prevent vertical overflow */
     overflow-x: auto;
@@ -33,19 +37,13 @@
 }
 
 .wrapper .item {
-    /* min-width: 125px;
-    height: 100px;
-    line-height: 100px;
-    text-align: center;
-    background-color:aliceblue white-space; */
-    /* 4. Prevent Flexbox from shrinking the items below their min-width */
+    border: 1px solid black;
     flex-shrink: 0; 
-    min-width: 125px;
+    min-width: 100px;
     height: 100px;
     line-height: 100px;
     text-align: center;
     
-    /* 5. Fixed the syntax typo here */
     background-color: aliceblue;
 }
 
@@ -132,4 +130,24 @@
     aspect-ratio: 1/1;
 
     border: 1px solid black;
+}
+
+.image_container {
+    padding: 45px;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.product_image {
+    display: block;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    max-width: 100%; 
+    height: auto;
+    border: 1px solid rgb(8, 3, 3);
+
 }
