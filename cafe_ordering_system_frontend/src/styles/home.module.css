@@ -17,9 +17,41 @@
     background-color: #ECE7D1;
 }
 
+.wrapper {
+    height: 110px; 
+    display: flex;
+    max-width: 100%;
+    min-height: 75px;
+    
+    /* 3. Enable horizontal scrolling and prevent vertical overflow */
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+.wrapper::-webkit-scrollbar {
+    width: 0px;
+}
+
+.wrapper .item {
+    /* min-width: 125px;
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
+    background-color:aliceblue white-space; */
+    /* 4. Prevent Flexbox from shrinking the items below their min-width */
+    flex-shrink: 0; 
+    min-width: 125px;
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
+    
+    /* 5. Fixed the syntax typo here */
+    background-color: aliceblue;
+}
+
 .header {
     display: flex;
-    height: 5%;
+    height: 5%; 
     width: 100%;
 }
 

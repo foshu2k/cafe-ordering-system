@@ -19,9 +19,9 @@ export default function Home() {
                 <div className={styles.categories}>
                     <p>Categories</p>
 
-                    <div className={styles.choices}>
-                        {Array.from({ length: 5}).map((_,i) => (
-                            <div />
+                    <div className={styles.wrapper}>
+                        {Array.from({ length: 8}).map((_,i) => (
+                            <div className={styles.item}>box</div>
                         ))}
                     </div>
 

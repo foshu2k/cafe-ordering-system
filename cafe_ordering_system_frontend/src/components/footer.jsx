@@ -9,7 +9,12 @@ export default function Footer() {
     return (
         <>
             <div className={styles.container}>
-                <p>Use Service</p>
+                <NavLink
+                    className={styles.button}
+                    to = { location.pathname == "/service" ? "/" : "/service" }
+                >
+                    <p>{location.pathname == "/service" ? "Back" : "Use Service"}</p>
+                </NavLink>
                 <div className={styles.mic_container}>
                     <div className={styles.mic_inner_container}>
 
