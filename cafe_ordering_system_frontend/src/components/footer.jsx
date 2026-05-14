@@ -1,8 +1,11 @@
 import styles from '../styles/footer.module.css'
 
-import { useNavigate, NavLink } from 'react-router-dom'
+import { useNavigate, NavLink, useLocation } from 'react-router-dom'
 
 export default function Footer() {
+
+    const location = useLocation();
+
     return (
         <>
             <div className={styles.container}>
@@ -15,9 +18,9 @@ export default function Footer() {
                 </div>
                 <NavLink
                     className={styles.button}
-                    to = "/cart"
+                    to = { location.pathname == "/cart" ? "/" : "/cart" }
                 >
-                    <p>Your Cart</p>
+                    <p>{location.pathname == "/cart" ? "Home" : "Your Cart"}</p>
                 </NavLink>
             </div>
         </>
