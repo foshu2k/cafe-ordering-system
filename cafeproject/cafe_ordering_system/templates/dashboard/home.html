@@ -1,0 +1,124 @@
+{% extends 'dashboard/base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="container">
+
+    <!-- HEADER -->
+    <h1 class="title">Welcome to Lumière Cafe!</h1>
+    <p class="subtitle">How would you like your coffee?</p>
+
+    <!-- CATEGORIES -->
+    <h2 class="section-title">Categories</h2>
+
+    <div class="categories">
+
+        <div class="category-box" onclick="filterProducts('coffee')">
+            <img src="{% static 'img/coffee.png' %}">
+            <p>Coffee</p>
+        </div>
+
+        <div class="category-box" onclick="filterProducts('noncoffee')">
+            <img src="{% static 'img/noncoffee.png' %}">
+            <p>Non Coffee</p>
+        </div>
+
+        <div class="category-box" onclick="filterProducts('fruittea')">
+            <img src="{% static 'img/fruittea.png' %}">
+            <p>Fruit Tea</p>
+        </div>
+
+        <div class="category-box" onclick="filterProducts('meals')">
+            <img src="{% static 'img/meals.png' %}">
+            <p>Meals</p>
+        </div>
+
+        <div class="category-box" onclick="filterProducts('desserts')">
+            <img src="{% static 'img/dessert.png' %}">
+            <p>Desserts</p>
+        </div>
+
+    </div>
+
+    <!-- PRODUCT GRID -->
+    <div class="product-grid">
+
+        <div class="product-card coffee">
+            <p>Americano</p>
+            <button onclick="addToCart('Americano', 120)">Add</button>
+        </div>
+
+        <div class="product-card coffee">
+            <p>Latte</p>
+            <button onclick="addToCart('Latte', 140)">Add</button>
+        </div>
+
+        <div class="product-card noncoffee">
+            <p>Chocolate Drink</p>
+            <button onclick="addToCart('Chocolate', 130)">Add</button>
+        </div>
+
+        <div class="product-card fruittea">
+            <p>Mango Tea</p>
+            <button onclick="addToCart('Mango Tea', 110)">Add</button>
+        </div>
+
+        <div class="product-card meals">
+            <p>Sandwich</p>
+            <button onclick="addToCart('Sandwich', 150)">Add</button>
+        </div>
+
+        <div class="product-card desserts">
+            <p>Cake</p>
+            <button onclick="addToCart('Cake', 160)">Add</button>
+        </div>
+
+    </div>
+
+</div>
+
+<!-- BOTTOM NAV -->
+<div class="bottom-nav">
+
+    <div class="nav-left" onclick="goService()">
+        ☕ Use Service
+    </div>
+
+    <div class="mic-btn">
+        🎤
+    </div>
+
+    <div class="nav-right" onclick="goCart()">
+        🛒 Your Cart
+    </div>
+
+</div>
+
+<!-- JS FUNCTIONS -->
+<script>
+function filterProducts(category) {
+
+    let products = document.querySelectorAll('.product-card');
+    let categories = document.querySelectorAll('.category-box');
+
+    // REMOVE active
+    categories.forEach(c => c.classList.remove('active'));
+
+    // ADD active to clicked
+    event.currentTarget.classList.add('active');
+
+    // FILTER products
+    products.forEach(p => {
+        if (category === 'all') {
+            p.style.display = 'block';
+        } else {
+            p.style.display = p.classList.contains(category)
+                ? 'block'
+                : 'none';
+        }
+    });
+}
+</script>
+
+{% endblock %}

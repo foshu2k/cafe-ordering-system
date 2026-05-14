@@ -1,0 +1,10 @@
+.products {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.product-card {
+    height: 120px;
+    background: #bbb;
+}

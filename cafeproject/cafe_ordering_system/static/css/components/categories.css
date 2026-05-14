@@ -1,0 +1,11 @@
+.categories {
+    display: flex;
+    gap: 10px;
+}
+
+.cat-box {
+    width: 60px;
+    height: 60px;
+    background: #bbb;
+    border-radius: 10px;
+}

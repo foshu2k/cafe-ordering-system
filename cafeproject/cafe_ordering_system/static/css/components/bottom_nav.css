@@ -1,0 +1,19 @@
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    justify-content: space-between;
+    background: #eee;
+    padding: 10px;
+}
+
+.mic-btn {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #ccc;
+    padding: 10px;
+    border-radius: 50%;
+}
