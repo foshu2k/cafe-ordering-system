@@ -1,0 +1,103 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+
+    padding: 2%;
+    height: 100%;
+    width: 100%;
+
+    background-color: #ECE7D1;
+}
+
+.header {
+    display: flex;
+    height: 5%;
+    width: 100%;
+}
+
+.customize_order {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 30%;
+    gap: 1%;
+}
+.images {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+
+    gap: 5%;
+}
+.big_image,
+.small_image {
+    background-color: grey;
+
+    width: 80%;
+    height: 60%;
+
+    border-radius: 10px;
+}
+.small_image {
+    height: 20%;
+}
+
+.categories {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+
+    height: 10%;
+    width: 100%;
+}
+
+.choices {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 1%;
+
+    height: 90%;
+    width: 100%;
+    gap: 5%;
+}
+
+.choices div {
+    height: 80%;
+    aspect-ratio: 1/1;
+
+    border: 1px solid black;
+}
+
+.products {
+    display: flex;
+    padding: 5%;
+    gap: 5%;
+
+    overflow-x:scroll;
+    flex-wrap: wrap;
+
+    justify-content: center;
+    align-items: flex-start;
+    height: 55%;
+    width: 100%;
+}
+
+.products div {
+    height: 35%;
+    aspect-ratio: 1/1;
+
+    border: 1px solid black;
+}
